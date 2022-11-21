@@ -43,6 +43,11 @@ export const Inputs = styled.div`
         color: white;
         border-radius: 10px;
     }
+
+    button:hover{
+        color: #008584;
+        background-color: white;
+    }
 `
 
 export const Icons = styled.div`
