@@ -8,9 +8,8 @@ export const Container = styled.div`
     display:flex;
     flex-direction: column;
     width: 100%;
-    height: 80vh;
-    align-items: center; 
-    background-color: #008584;
+    align-items: center;
+    height: 70vh;
 `
 
 export const H1 = styled.h1`
@@ -36,6 +35,13 @@ export const Inputs = styled.div`
         border: none;
     }
 
+`
+
+export const Buttons = styled.div`
+    display: flex;
+    gap: 2em;
+    margin-top: 1em;
+
     button{
         background-color: transparent;
         padding: 10px;
@@ -51,7 +57,7 @@ export const Inputs = styled.div`
 `
 
 export const Icons = styled.div`
-    font-size: 4.5em;
+    font-size: 10em;
     text-align: center;
     color: white;
 `

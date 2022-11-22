@@ -1,12 +1,13 @@
-import * as H from './assets/components/Header';
-import * as C from './assets/components/Container';
+import {Footer} from './assets/components/Footer';
+import {Container} from './assets/components/Container';
+import {Main} from './style-app' 
 
 const App = () => {
   return(
-    <>
-      <H.Header />
-      <C.Container/>
-    </>
+    <Main>
+      <Container/>
+      <Footer />
+    </Main>
   );
 }
 

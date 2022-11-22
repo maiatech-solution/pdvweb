@@ -14,8 +14,10 @@ export const Container = () => {
                 </C.Icons>
                 <input name="login" id="login" type="text" placeholder='Login' />
                 <input type="password" name="senha" id="senha" placeholder='Senha' />
-                <button >Login</button>
-                <button >Esqueci minha senha</button>
+                <C.Buttons>
+                    <button>Login</button>
+                    <button >Esqueci minha senha</button>
+                </C.Buttons>
             </C.Inputs>
         </C.Container>
     )
