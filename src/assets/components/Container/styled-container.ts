@@ -7,8 +7,14 @@ type imgProps = {
 export const Container = styled.div`
     display:flex;
     flex-direction: column;
-    width: 100%;
     align-items: center;
     height: 70vh;
-`
+    margin-bottom: 2rem;
+    .bg-red-new{
+        background-color: #eb3237;
+    }
 
+    .bg-red-new:hover{
+        background-color: #8b0000;
+    }
+`
