@@ -3,8 +3,8 @@ type ButtonsProps = {
     text: string
 }
 
-export const Buttons =({text}:ButtonsProps,{className}:ButtonsProps) => {
+export const Buttons =({text,className}:ButtonsProps) => {
     return (
-        <button>{text} {className}</button>
+        <button className={className}>{text} </button>
     )
 }
