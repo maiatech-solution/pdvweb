@@ -3,6 +3,8 @@ import { BsPersonCircle } from "react-icons/bs";
 import {Buttons} from '../button/buttons'
 import {Inputs} from '../inputs/inputs'
 import Modal from '../modal/modal'
+import {Home} from '../../pages/Home'
+import { Link } from 'react-router-dom';
 
 
 export const Container = () => {
@@ -27,14 +29,19 @@ export const Container = () => {
                     type={'password'} 
                 />
                 <div className='flex flex-col gap-3 md:flex-row'>
-                    <Buttons  
-                        text={'Login'} 
-                        className={'bg-green-800 p-1 md:p-2 hover:bg-green-900 border-solid border border-white text-white rounded-md mt-2'} 
-                    />
-                    <Buttons 
-                        text={'Esqueci minha senha'} 
-                        className={'bg-red-new p-2 hover:bg-red-500 border-solid border border-white text-white rounded-md mt-2'} 
-                    />
+                    <Link to={'/home'}>
+                        <Buttons  
+                            text={'Login'} 
+                            className={'bg-green-800 p-1 md:p-2 hover:bg-green-900 border-solid border border-white text-white rounded-md mt-2'} 
+                        />
+                    </Link>
+                    
+                        <Buttons 
+                            text={'Esqueci minha senha'} 
+                            className={'bg-red-new p-2 hover:bg-red-500 border-solid border border-white text-white rounded-md mt-2'} 
+                        />
+                    
+                    
                 </div>
             </div>
         </C.Container>

@@ -1,11 +1,16 @@
 import {Footer} from './assets/components/Footer';
 import {Container} from './assets/components/Container';
+import { Route, Routes } from 'react-router-dom';
+import Login from './assets/pages/Login';
+import { Home } from './assets/pages/Home';
 
 const App = () => {
   return(
     <div >
-      <Container/>
-      <Footer />
+      <Routes>
+        <Route path='/' element={<Login />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+      </Routes>
     </div>
   );
 }
