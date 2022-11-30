@@ -2,6 +2,7 @@ import * as C from './styled-container';
 import { BsPersonCircle } from "react-icons/bs";
 import {Buttons} from '../button/buttons'
 import {Inputs} from '../inputs/inputs'
+import Modal from '../modal/modal'
 
 
 export const Container = () => {
