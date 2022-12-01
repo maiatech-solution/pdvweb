@@ -1,7 +1,7 @@
 import {Footer} from '../components/Footer';
 import * as C from '../estilos/styled-login';
-import { BsPersonCircle } from "react-icons/bs";
-import {Inputs} from '../components/inputs/inputs';
+import { BsPersonCircle,BsBoxArrowInRight } from "react-icons/bs";
+import {Inputs} from '../components/Inputs/inputs';
 import {Buttons} from '../components/button/buttons'
 import { Link } from 'react-router-dom';
 import { Title } from '../components/Title/title';
@@ -26,20 +26,19 @@ const Login = () => {
                     name={'senha'} id={'senha'} 
                     type={'password'} 
                 />
-                <div className='flex flex-col gap-3 md:flex-row'>
+                <div className='flex flex-col gap-4 md:gap-8 md:flex-row justify-center text-center'>
                     <Link to={'/home'}>
-                        <Buttons  
-                            text={'Login'} 
-                            className={'bg-green-800 p-1 md:p-2 hover:bg-green-900 border-solid border border-white text-white rounded-md mt-2'} 
-                        />
+
+                    <button>
+                        <BsBoxArrowInRight className='bg-green-800 h-10 p-2 md:p-2 hover:bg-green-900 border-solid border border-white text-white rounded-md mt-2 text-6xl' />
+                    </button>
                     </Link>
                     
-                        <Buttons 
-                            text={'Esqueci minha senha'} 
-                            className={'bg-red-new p-2 hover:bg-red-500 border-solid border border-white text-white rounded-md mt-2'} 
-                        />
-                    
-                    
+                     <Buttons 
+                        text={'Esqueci minha senha'} 
+                        className={'bg-red-new p-2 md:p-2 hover:bg-red-500 h-10 border-solid border border-white text-white rounded-md mt-2'} 
+                    />
+            
                 </div>
             </div>
         
