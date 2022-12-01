@@ -8,9 +8,7 @@ import {Modal} from '../components/Modal/modal'
 export const Home = () => {
     return (
         <C.Container>        
-            <Title className={'my-24 text-white text-2xl md:text-5xl'} text={'Gerenciador de senhas'}></Title>
-
-            
+            <Title className={'my-24 text-white text-2xl md:text-5xl'} text={'Gerenciador de senhas'}></Title>  
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-9">
                 <Modal />
