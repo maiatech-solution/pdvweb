@@ -10,8 +10,9 @@ const Login = () => {
   return(
     <div >
       <C.Container>
-            <Title className={'my-24 text-white text-2xl md:text-5xl'} text={'Entre com sua conta'}></Title> 
-            <div className='flex flex-col gap-4 justify-center items-center w-9/12 lg:w-3/12'>
+            <Title className={'my-24 text-white text-2xl md:text-5xl bg-transparent'} text={'Entre com sua conta'}></Title> 
+            
+            <div className='flex flex-col gap-4 justify-center items-center w-9/12 lg:w-3/12 mb-9'>
                 <BsPersonCircle className='text-7xl md:text-9xl text-white ' />
                 <Inputs 
                     className={'p-3 outline-none w-full rounded-md bg-white'} 
@@ -42,8 +43,8 @@ const Login = () => {
                 </div>
             </div>
         
+          <Footer />
         </C.Container>
-      <Footer />
     </div>
   );
 }

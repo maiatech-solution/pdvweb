@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { BsFillPlusSquareFill, BsFillPeopleFill, BsFillKeyFill, BsTools, BsEye } from "react-icons/bs";
-import { Cards } from "../Cards/cards";
 
 export const Form = () => {
 
