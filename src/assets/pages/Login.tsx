@@ -1,12 +1,11 @@
-import {Footer} from '../components/Footer';
-import * as C from '../estilos/styled-login';
-import { BsPersonCircle,BsBoxArrowInRight } from "react-icons/bs";
-import {Buttons} from '../components/button/buttons'
+
+
 import { Link } from 'react-router-dom';
-import { Title } from '../components/Title/title';
 import * as yup from 'yup';
-import {yupResolver} from '@hookform/resolvers/yup'
+import { yupResolver } from '@hookform/resolvers/yup'
 import { SubmitHandler, useForm } from 'react-hook-form';
+import LogoEmpresa from '../imgs/maiatech.png'
+import { useState } from 'react';
 
 
 const Login = () => {
@@ -15,72 +14,84 @@ const Login = () => {
     login: string,
     pass: string,
   }
-  
+
+
   const createUserFormSchema = yup.object().shape({
     login: yup.string().required('E-mail obrigatório').email('Insira um e-mail válido'),
-    pass: yup.string().required('Senha obrigatória').min(6,'Mínimo de 6 caracteres')
+    pass: yup.string().required('Senha obrigatória').min(6, 'Mínimo de 6 caracteres')
   })
-  
-  const { 
+
+  const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<CreateUserData>({
-    resolver: yupResolver(createUserFormSchema)})
-  
+    resolver: yupResolver(createUserFormSchema)
+  })
+
   const handleCreateUser: SubmitHandler<CreateUserData> = async () => {
-    alert('OK!')
+    location.href = "/home"
   }
 
   console.log(`Erros: errors`)
 
-  return(
-    <div >
-      <C.Container>
-            <Title className={'my-24 text-white text-2xl md:text-5xl bg-transparent'} text={'Entre com sua conta'}></Title> 
-            
-            <form onSubmit={handleSubmit(handleCreateUser)} className='flex flex-col gap-4 justify-center items-center w-9/12 lg:w-3/12 mb-9'>
-                <BsPersonCircle className='text-7xl md:text-9xl text-white ' />
-                <input 
-                    className='p-3 outline-none w-full rounded-md bg-white'
-                    placeholder='Login'
-                    //@ts-ignore
-                    name='login'
-                    id='login'
-                    type='text'
-                    {...register('login')}
-                />
-                {errors.login && <span className='text-yellow-500'>{errors.login.message}</span>}
-                <input 
-                    className='p-3 outline-none w-full rounded-md bg-white' 
-                    placeholder='Senha' 
-                    //@ts-ignore
-                    name='pass' 
-                    id='senha' 
-                    type='password' 
-                    {...register('pass')}
-                />
-                {errors.pass && <span className='text-yellow-500'>{errors.pass.message}</span>}
-                <div className='flex flex-col gap-4 md:gap-8 md:flex-row justify-center text-center'>
+  return (
+    <div className=" container-login">
+      <div className=" card-login " >
 
-                  
-                    {/*<Link to={'/home'}>*/}
+        <div className="header-login">
+          <h2 className='title-login'>Login</h2>
+          <h5 className=" subtitle-login">Entre com suas credenciais</h5>
+        </div>
 
-                    <button type='submit'>
-                        <BsBoxArrowInRight className='bg-green-800 h-10 p-2 md:p-2 hover:bg-green-900 border-solid border border-white text-white rounded-md mt-2 text-6xl' />
-                    </button>
-                    {/*</Link>*/}
-                    
-                     <Buttons 
-                        text={'Esqueci minha senha'} 
-                        className={'bg-red-new p-2 md:p-2 hover:bg-red-500 h-10 border-solid border border-white text-white rounded-md mt-2'} 
-                    />
-            
-                </div>
-            </form>
-        
-          <Footer />
-        </C.Container>
+        <div className=" logo-login">
+          <img className="img-login" src={LogoEmpresa} alt="LogoEmpresa" />
+        </div>
+
+        <form onSubmit={handleSubmit((handleCreateUser))} className='bg-emerald-200 h-[60%] w-full m-auto flex flex-col rounded-b-[2em]'>
+          <div className="bg-emerald-200 mt-4 justify-center items-center gap-4 flex flex-col h-[40%]">
+
+            <input
+              className='p-3 outline-none w-4/5 rounded-md bg-white'
+              placeholder='Digite seu login'
+              //@ts-ignore
+              name='login'
+              id='login'
+              type='text'
+              {...register('login')}
+            />
+
+            {errors.login && <span className='text-orange-500 bg-transparent'>{errors.login.message}</span>}
+
+            <input
+              className='p-3 outline-none w-4/5 rounded-md bg-white'
+              placeholder='Digite sua senha'
+              //@ts-ignore
+              name='pass'
+              id='pass'
+              type='password'
+              {...register('pass')}
+            />
+            {errors.pass && <span className='text-orange-500 bg-transparent'>{errors.pass.message}</span>}
+          </div>
+
+          <div className='flex flex-col gap-4 md:flex-col justify-center m-auto text-center w-3/6 bg-emerald-200'>
+
+            <button type='submit' className="p-2 rounded-md bg-emerald-700 hover:bg-emerald-800 text-white">
+              Login
+            </button>
+
+            <button className="p-2 rounded-md bg-rose-700 hover:bg-rose-800 text-white">
+              Esqueci minha senha
+            </button>
+
+          </div>
+
+          <span className="bg-emerald-400 text-center text-white text-xs rounded-b-[2em]">Sistema PDV Web</span>
+
+        </form>
+
+      </div>
     </div>
   );
 }

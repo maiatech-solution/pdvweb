@@ -23,8 +23,8 @@ export const Form = () => {
             </div>
             <div className="w-full flex gap-4 items-center">
                 <label htmlFor="group-pass" className="text-white">Categoria: </label>
-                <select name="groups" id="groups" className="border rounded p-2 outline-none text-white">
-                    <option value="">Selecione...</option>
+                <select name="groups" id="groups" className="border rounded p-2 outline-none">
+                    <option value="" className="">Selecione...</option>
                     <option value="Internet">Internet</option>
                     <option value="Servidores">Servidores</option>
                     <option value="E-mails">E-mails</option>

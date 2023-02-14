@@ -1,7 +1,8 @@
-import {Footer} from './assets/components/Footer';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
+
 import Login from './assets/pages/Login';
 import { Home } from './assets/pages/Home';
+import { Venda } from './assets/pages/Venda';
 
 const App = () => {
   return(
@@ -9,6 +10,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Login />}></Route>
         <Route path='/home' element={<Home />}></Route>
+        <Route path='/venda' element={<Venda />}></Route>
       </Routes>
     </div>
   );

@@ -7,4 +7,33 @@
   padding: 0;
   box-size: border box;
   text-decoration: none;
+  background-color: #c3d5d9;
+}
+
+.container-login{
+  @apply h-screen flex
+}
+
+.card-login{
+  @apply w-2/5 flex m-auto flex-col h-4/6 rounded-t-[2em] bg-emerald-200 justify-around
+}
+
+.header-login{
+  @apply rounded-[2em] border bg-emerald-800 p-2 h-[15%]
+}
+
+.title-login{
+  @apply text-white text-xl md:text-5xl bg-transparent text-center mb-2
+}
+
+.subtitle-login{
+  @apply bg-transparent text-center text-gray-300
+}
+
+.logo-login{
+  @apply bg-emerald-200 h-[25%] flex justify-center
+}
+
+.img-login{
+  @apply w-40 bg-emerald-200 
 }
