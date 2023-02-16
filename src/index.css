@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-size: border box;
@@ -10,30 +10,142 @@
   background-color: #c3d5d9;
 }
 
-.container-login{
-  @apply h-screen flex
+/* Start Header ------------------------------------ */
+
+.header-home {
+  @apply h-[10vh] items-end flex justify-center;
 }
 
-.card-login{
-  @apply w-2/5 flex m-auto flex-col h-4/6 rounded-t-[2em] bg-emerald-200 justify-around
+.h2-header {
+  @apply text-emerald-800 text-2xl md:text-5xl text-center;
 }
 
-.header-login{
-  @apply rounded-[2em] border bg-emerald-800 p-2 h-[15%]
+.botao-home {
+  @apply p-8 rounded-lg border border-solid border-white w-60  flex flex-col items-center justify-center gap-4;
 }
 
-.title-login{
-  @apply text-white text-xl md:text-5xl bg-transparent text-center mb-2
+/* End Header ------------------------------------ */
+
+/* Start Home ------------------------------------ */
+
+.container-home {
+  @apply flex justify-center xl:mb-0 mb-12 mt-8 xl:mt-0 md:h-[85vh];
 }
 
-.subtitle-login{
-  @apply bg-transparent text-center text-gray-300
+.grid-container-home {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8 m-auto;
 }
 
-.logo-login{
-  @apply bg-emerald-200 h-[25%] flex justify-center
+/* Start Page Login ------------------------------------ */
+
+.container-login {
+  @apply h-screen flex;
 }
 
-.img-login{
-  @apply w-40 bg-emerald-200 
+.card-login {
+  @apply w-2/5 flex m-auto flex-col h-4/6 rounded-t-[2em] bg-emerald-200 justify-around;
 }
+
+.header-login {
+  @apply rounded-[2em] border bg-emerald-800 p-2 h-[15%];
+}
+
+.title-login {
+  @apply text-white text-xl md:text-5xl bg-transparent text-center mb-2;
+}
+
+.subtitle-login {
+  @apply bg-transparent text-center text-gray-300;
+}
+
+.logo-login {
+  @apply bg-emerald-200 h-[25%] flex justify-center;
+}
+
+.img-login {
+  @apply w-40 bg-emerald-200;
+}
+
+.form-login {
+  @apply bg-emerald-200 h-[60%] w-full m-auto flex flex-col rounded-b-[2em];
+}
+
+.form-container-login {
+  @apply bg-emerald-200 mt-4 justify-center items-center gap-4 flex flex-col h-[40%];
+}
+
+.inputs-login {
+  @apply p-3 outline-none w-4/5 rounded-md bg-white;
+}
+
+.errors-login {
+  @apply text-orange-500 bg-transparent;
+}
+
+.botao-container-login {
+  @apply flex flex-col gap-4 md:flex-col justify-center m-auto text-center w-3/6 bg-emerald-200;
+}
+
+.botao-red-login {
+  @apply rounded-md bg-rose-700 hover:bg-rose-800 text-white p-2;
+}
+
+.botao-white-login {
+  @apply p-2 rounded-md bg-emerald-700 hover:bg-emerald-800 text-white;
+}
+
+.footer-card-login {
+  @apply bg-emerald-400 text-center text-white text-xs rounded-b-[2em];
+}
+
+/* End Page Login ------------------------------------ */
+
+/* Start PDV ------------------------------------ */
+
+.container-venda {
+  @apply flex justify-center md:h-[85vh] flex-col items-center border border-red-400;
+}
+
+.pesquisa-venda {
+  @apply h-[10%] w-[70%] border mb-4 mt-4;
+}
+
+.desc-venda {
+  @apply h-[30%] border w-[70%] mb-4 flex justify-around items-center;
+}
+
+.table-venda {
+  @apply h-[50%] w-[70%] mb-4 text-left bg-emerald-200 overflow-auto border border-black;
+}
+
+
+.theader tr th {
+  @apply border-2 border-black bg-emerald-500 pl-4 ;
+}
+
+
+table tbody tr{
+  @apply  border
+}
+
+.tbody tr td {
+  @apply bg-emerald-200 pl-4 ;
+}
+
+.botao-venda {
+  @apply h-[10%] w-[50%] mb-4 flex justify-around;
+}
+
+/* End PDV ------------------------------------ */
+
+/* Start Footer ------------------------------------ */
+
+.container-footer {
+  @apply w-screen bg-gray-400 border-t-2 h-[5vh] flex justify-center items-center;
+}
+
+.h5-footer {
+  @apply text-emerald-800 font-bold bg-transparent text-xs;
+}
+
+/* End Footer ------------------------------------ */
