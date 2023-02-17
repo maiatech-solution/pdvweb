@@ -72,7 +72,7 @@ const Login = () => {
               type='password'
               {...register('pass')}
             />
-            {errors.pass && <span className='form-login'>{errors.pass.message}</span>}
+            {errors.pass && <span className='errors-login'>{errors.pass.message}</span>}
           </div>
 
           <div className='botao-container-login'>

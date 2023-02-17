@@ -95,7 +95,7 @@
 }
 
 .footer-card-login {
-  @apply bg-emerald-400 text-center text-white text-xs rounded-b-[2em];
+  @apply bg-emerald-400 text-center text-white rounded-b-[2em] text-sm;
 }
 
 /* End Page Login ------------------------------------ */
@@ -103,33 +103,33 @@
 /* Start PDV ------------------------------------ */
 
 .container-venda {
-  @apply flex justify-center md:h-[85vh] flex-col items-center border border-red-400;
+  @apply flex justify-center md:h-[85vh] flex-col items-center;
 }
 
 .pesquisa-venda {
-  @apply h-[10%] w-[70%] border mb-4 mt-4;
+  @apply h-[10%] w-[70%] mb-4 mt-4;
 }
 
 .desc-venda {
-  @apply h-[30%] border w-[70%] mb-4 flex justify-around items-center;
+  @apply h-[30%] border  w-[70%] mb-4 flex justify-around items-center gap-4;
 }
 
 .table-venda {
-  @apply h-[50%] w-[70%] mb-4 text-left bg-emerald-200 overflow-auto border border-black;
+  @apply h-[50%] w-[70%] mb-4 text-left bg-emerald-200 overflow-auto border border-gray-500;
 }
 
 
 .theader tr th {
-  @apply border-2 border-black bg-emerald-500 pl-4 ;
+  @apply border border-cyan-800 bg-emerald-500 pl-4 ;
 }
 
 
 table tbody tr{
-  @apply  border
+  @apply  border border-gray-500;
 }
 
 .tbody tr td {
-  @apply bg-emerald-200 pl-4 ;
+  @apply bg-emerald-200 border border-gray-500 p-2;
 }
 
 .botao-venda {
@@ -145,7 +145,7 @@ table tbody tr{
 }
 
 .h5-footer {
-  @apply text-emerald-800 font-bold bg-transparent text-xs;
+  @apply text-emerald-800 font-bold bg-transparent text-sm;
 }
 
 /* End Footer ------------------------------------ */

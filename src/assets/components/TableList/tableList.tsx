@@ -1,8 +1,10 @@
+import { BsXCircleFill } from "react-icons/bs"
+
 export const TableList = () => {
     return (
-        <div className="table-venda">
+        <div className="table-venda rounded-md">
 
-            <table className="table-auto w-full">
+            <table className="table-auto w-full rounded-md">
                 <thead className="theader">
                     <tr className="tr-theader">
                         <th className=" ">Cód Produto</th>
@@ -20,7 +22,9 @@ export const TableList = () => {
                         <td className=" ">2</td>
                         <td className=" ">50,00</td>
                         <td className=" ">100,00</td>
-                        <td className="  text-center">X</td>
+                        <td className="  text-center">
+                            <BsXCircleFill className="text-red-700 cursor-pointer m-auto "/>
+                        </td>
                     </tr>
                     <tr>
                         <td className=" ">321</td>
@@ -28,7 +32,9 @@ export const TableList = () => {
                         <td className=" ">5</td >
                         <td className=" ">40,00</td>
                         <td className=" ">200,00</td>
-                        <td className="  text-center">X</td>
+                        <td className="  text-center">
+                            <BsXCircleFill className="text-red-700 cursor-pointer m-auto"/>
+                        </td>
                     </tr>
                     <tr>
                         <td className=" ">100</td>
@@ -36,7 +42,9 @@ export const TableList = () => {
                         <td className=" ">10</td>
                         <td className=" ">500,00</td>
                         <td className=" ">5000,00</td>
-                        <td className="  text-center">X</td>
+                        <td className="  text-center ">
+                            <BsXCircleFill className="text-red-700 cursor-pointer m-auto"/>
+                        </td>
                     </tr>
 
                 </tbody>
