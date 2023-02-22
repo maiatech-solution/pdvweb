@@ -16,16 +16,16 @@ export const Venda = () => {
 
       <div className="container-venda">
 
-        <div className="pesquisa-venda rounded-md flex justify-center items-center">
-          <div className="w-[5%] flex justify-center">
-            <Link to='/home'>
-              <button >
-                <BsFillArrowLeftCircleFill className="text-4xl bg-white text-cyan-500 hover:text-cyan-600 rounded-[50%]" />
+        <div className="pesquisa-venda rounded-md flex justify-center items-center border bg-cyan-600">
+          <div className="w-[5%] flex justify-center bg-cyan-600">
+            <Link to='/home' className="bg-transparent">
+              <button className="bg-transparent">
+                <BsFillArrowLeftCircleFill className="text-4xl items-center bg-transparent text-gray-200 hover:text-gray-300 rounded-[50%]" />
               </button>
             </Link>
 
           </div>
-          <div className=" w-[90%]  flex justify-center">
+          <div className=" w-[90%]  flex justify-center bg-transparent">
             <input type="text" placeholder="Pesquisar produto" className="bg-white w-full p-2 outline-none rounded-md" />
 
           </div>
@@ -43,6 +43,7 @@ export const Venda = () => {
             Cancelar Venda
           </button>
         </div>
+        
 
 
       </div>
