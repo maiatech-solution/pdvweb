@@ -1,5 +1,5 @@
 import React from "react";
-import { BsArrowBarRight, BsFillArrowLeftCircleFill, BsFillGrid3X3GapFill, BsPlusLg, BsXCircleFill } from "react-icons/bs";
+import { BsSearch} from "react-icons/bs";
 import { Produtos } from "../../../date/produtos";
 
 export default function Modal() {
@@ -11,7 +11,7 @@ export default function Modal() {
 
       <div className="w-[5%] flex justify-center bg-transparent">
         <button type="button" onClick={() => setShowModal(true)}>
-          <BsFillGrid3X3GapFill className="text-4xl text-gray-200 hover:text-gray-300 bg-transparent" />
+          <BsSearch className="text-4xl text-gray-200 hover:text-gray-300 bg-transparent" />
         </button>
 
       </div>
@@ -42,10 +42,10 @@ export default function Modal() {
                      {Produtos.map(item => (
                       <a href="" className="bg-white w-screen text-red-900">
                         <li key={item.cod} className="bg-white hover:bg-gray-200 text-gray-800 p-2 mb-2 rounded-md">
-                          id: {item.cod} || 
-                          Valor: R$ {item.valorUni.toFixed(2)} ||
-                          Saldo: <span style={item.saldo > 0 ? { color: "green" } : { color: "red" }} className='bg-white'>{item.saldo}</span>  <br />
-                          Descrição: {item.desc} <br /> 
+                          id: <span className="bg-transparent text-xl">{item.cod}</span> || 
+                          Valor: R$ <span className="bg-transparent text-xl">{item.valorUni.toFixed(2)}</span> ||
+                          Saldo: <span style={item.saldo > 0 ? { color: "green" } : { color: "red" }} className='bg-transparent text-xl'>{item.saldo}</span>  <br />
+                          Descrição: <span className="text-2xl bg-transparent">{item.desc}</span> <br /> 
                         </li>
                       </a>
                     ))}

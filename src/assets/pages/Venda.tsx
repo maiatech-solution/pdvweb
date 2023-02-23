@@ -27,7 +27,6 @@ export const Venda = () => {
           </div>
           <div className=" w-[90%]  flex justify-center bg-transparent">
             <input type="text" placeholder="Pesquisar produto" className="bg-white w-full p-2 outline-none rounded-md" />
-
           </div>
           <Modal />
         </div>
