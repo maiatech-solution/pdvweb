@@ -12,12 +12,12 @@ export const Venda = () => {
 
   return (
     <div >
-      <Header text="PDV" />
+      <Header text="PDV" className='text-4xl text-emerald-800'/>
 
       <div className="container-venda">
 
-        <div className="pesquisa-venda rounded-md flex justify-center items-center border bg-cyan-600">
-          <div className="w-[5%] flex justify-center bg-cyan-600">
+        <div className="pesquisa-venda rounded-md flex justify-center items-center border bg-green-900">
+          <div className="w-[5%] flex justify-center bg-transparent">
             <Link to='/home' className="bg-transparent">
               <button className="bg-transparent">
                 <BsFillArrowLeftCircleFill className="text-4xl items-center bg-transparent text-gray-200 hover:text-gray-300 rounded-[50%]" />

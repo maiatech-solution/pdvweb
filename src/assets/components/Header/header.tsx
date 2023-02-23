@@ -1,11 +1,12 @@
 type Props = {
     text: string;
+    className:string
 }
 
-export const Header = ({text}:Props) => {
+export const Header = ({text,className}:Props) => {
     return(
         <header className=" header-home">
-                <h2 className='h2-header '>{text}</h2>
+                <h2 className={className}>{text}</h2>
             </header>
     )
 }

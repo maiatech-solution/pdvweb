@@ -138,6 +138,19 @@ table tbody tr{
 
 /* End PDV ------------------------------------ */
 
+/* Start Estoque ------------------------------------ */
+
+
+.theader-estoque tr th {
+  @apply border border-cyan-800 bg-cyan-500 pl-4 ;
+}
+
+.tbody-estoque tr td {
+  @apply  bg-cyan-200 pl-4 border border-gray-500 p-2;
+}
+
+/* End Estoque ------------------------------------ */
+
 /* Start Footer ------------------------------------ */
 
 .container-footer {
